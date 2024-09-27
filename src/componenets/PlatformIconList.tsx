@@ -18,7 +18,7 @@ interface Props {
 }
 
 const PlatformIconList = ({ platform }: Props) => {
-  const icontMap: { [key: string]: IconType } = {
+  const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
     xbox: FaXbox,
@@ -33,7 +33,7 @@ const PlatformIconList = ({ platform }: Props) => {
   return (
     <HStack marginY={1}>
       {platform.map((platform) => (
-        <Icon color="gray.500" as={icontMap[platform.slug]} />
+        <Icon color="gray.500" as={iconMap[platform.slug]} />
       ))}
     </HStack>
   );
